@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+}
+
+.resume {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    background: white;
+    position: relative;
+    padding: 38px 60px 50px;
+    overflow: hidden;
+}
+
+/* Decorative shapes */
+.left-shape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 495px;
+    background: #d7eef5;
+}
+
+.top-shape {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    width: 420px;
+    height: 23px;
+    background: #9fc2d1;
+}
+
+.right-square {
+    position: absolute;
+    right: 60px;
+    top: 44px;
+    width: 130px;
+    height: 130px;
+    background: #5130ad;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 58px;
+}
+
+.right-blue {
+    position: absolute;
+    right: 0;
+    top: 44px;
+    width: 60px;
+    height: 130px;
+    background: #d7eef5;
+}
+
+.bottom-shape {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 420px;
+    height: 23px;
+    background: #547989;
+}
+
+/* Header */
+.header {
+    position: relative;
+    z-index: 2;
+    padding-right: 170px;
+}
+
+.name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 39px;
+    font-weight: bold;
+    color: #111;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.email {
+    font-size: 16px;
+    color: #444;
+}
+
+.email strong {
+    color: #222;
+}
+
+/* Sections */
+.section {
+    position: relative;
+    z-index: 2;
+    margin-top: 31px;
+}
+
+.section-title {
+    border-bottom: 2px solid #333;
+    padding-bottom: 7px;
+    color: #222;
+    font-size: 21px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.icon {
+    font-size: 19px;
+    width: 22px;
+    text-align: center;
+    color: #111;
+}
+
+/* Profile */
+.profile {
+    font-size: 16px;
+    line-height: 1.45;
+    max-width: 870px;
+}
+
+/* Education */
+.education {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    row-gap: 16px;
+    margin-top: 5px;
+}
+
+.year {
+    font-size: 16px;
+    color: #444;
+    padding-top: 4px;
+}
+
+.degree {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.15;
+}
+
+.institution {
+    font-size: 16px;
+    color: #444;
+    margin-top: 2px;
+}
+
+/* Skills */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 12px;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.skill {
+    min-height: 19px;
+}
+
+/* Objective */
+.objective {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Projects */
+.project {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    margin-top: 2px;
+}
+
+.project-title {
+    font-size: 20px;
+    color: #222;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Qualities */
+.qualities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 8px;
+}
+
+.quality {
+    background: #050505;
+    color: white;
+    padding: 7px 12px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* Languages */
+.languages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Declaration */
+.declaration {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.signature {
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+/* Print */
+@media print {
+    body {
+        background: white;
+    }
+
+    .resume {
+        margin: 0;
+        width: 210mm;
+        min-height: 297mm;
+        box-shadow: none;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .resume {
+        width: 95%;
+        padding: 35px;
+    }
+
+    .right-square {
+        right: 35px;
+    }
+
+    .top-shape {
+        right: 35px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .education,
+    .project {
+        grid-template-columns: 130px 1fr;
+    }
+}
